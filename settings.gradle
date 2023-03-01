@@ -1,0 +1,6 @@
+rootProject.name = 'MicroServiceOgreniyorum'
+include 'AuthMicroService'
+include 'ETicaretMicroService'
+include 'UrunMicroService'
+include 'UserMicroService'
+
