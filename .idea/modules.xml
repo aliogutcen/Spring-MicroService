@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuthMicroService/MicroServiceOgreniyorum.AuthMicroService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AuthMicroService/MicroServiceOgreniyorum.AuthMicroService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ETicaretMicroService/MicroServiceOgreniyorum.ETicaretMicroService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ETicaretMicroService/MicroServiceOgreniyorum.ETicaretMicroService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UrunMicroService/MicroServiceOgreniyorum.UrunMicroService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UrunMicroService/MicroServiceOgreniyorum.UrunMicroService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UserMicroService/MicroServiceOgreniyorum.UserMicroService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UserMicroService/MicroServiceOgreniyorum.UserMicroService.main.iml" />
+    </modules>
+  </component>
+</project>
