@@ -19,7 +19,8 @@ public enum ErrorType {
     AUTH_PASSWORD_ERROR(1301,"Şifreler uyuşmuyor",BAD_REQUEST),
 
     AUTH_USERNAME_ERROR(1302,"Kullanıcı adı daha önce alınmış",BAD_REQUEST),
-    AUTH_LOGIN_ERROR(1303,"Kullanıcı adı ya da şifre hatali",BAD_REQUEST),
+
+    INVALID_TOKEN(4001,"Geçersiz token bilgisi",BAD_REQUEST),
 
     INTERNAL_ERROR(3000,"Sunucuda beklenmeyen hata", INTERNAL_SERVER_ERROR),
 

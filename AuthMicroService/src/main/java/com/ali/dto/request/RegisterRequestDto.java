@@ -17,7 +17,6 @@ public class RegisterRequestDto {
     @NotNull(message = "Kullanıcı adı girilmesi zorunludur")
     @Size(min = 3,max = 18)
     String username;
-
     @NotNull(message = "Şifre boş geçilemez")
     @Size(min = 8,max = 64)
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,64}$"
