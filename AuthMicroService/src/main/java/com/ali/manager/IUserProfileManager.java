@@ -18,7 +18,9 @@ import static com.ali.constant.RestEndPoints.SAVE;
         url = "${bu-benim-tanimim.userprofile-url}",
         decode404 = true
 )
+
 public interface IUserProfileManager {
     @PostMapping(SAVE)
     ResponseEntity<Boolean> save(@RequestBody UserSaverRequestDto dto);
 }
+

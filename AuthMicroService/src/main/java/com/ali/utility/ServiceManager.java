@@ -1,10 +1,4 @@
 package com.ali.utility;
-/*
-   Tüm servisler için Spring DataJpa kullanımı için kalıp servis yapısı
-   kullanımı
-    <T> entity adı
-    <ID> entitiye ait @ID ile başlayan değişkenin adı.
- */
 
 
 
@@ -18,11 +12,9 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 @Getter
-public class ServiceManager<T extends BaseEntity,ID> implements IService<T,ID>{
+public class ServiceManager<T extends BaseEntity, ID> implements IService<T, ID> {
 
-
-    private final JpaRepository<T,ID> repository;
-
+    private final JpaRepository<T, ID> repository;
     @Override
     public T save(T t) {
         t.setCreateDate(System.currentTimeMillis());
@@ -30,19 +22,15 @@ public class ServiceManager<T extends BaseEntity,ID> implements IService<T,ID>{
         t.setState(true);
         return repository.save(t);
     }
-
     @Override
     public Iterable<T> saveAll(Iterable<T> t) {
-        t.forEach(x->{
+        t.forEach(x -> {
             x.setCreateDate(System.currentTimeMillis());
             x.setUpdateDate(System.currentTimeMillis());
             x.setState(true);
-
         });
-
         return repository.saveAll(t);
     }
-
     @Override
     public T update(T t) {
 
@@ -50,7 +38,6 @@ public class ServiceManager<T extends BaseEntity,ID> implements IService<T,ID>{
 
         return repository.save(t);
     }
-
     @Override
     public void delete(T t) {
         repository.delete(t);

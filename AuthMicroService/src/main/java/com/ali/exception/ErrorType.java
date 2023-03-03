@@ -21,6 +21,8 @@ public enum ErrorType {
     AUTH_USERNAME_ERROR(1302,"Kullanıcı adı daha önce alınmış",BAD_REQUEST),
     AUTH_LOGIN_ERROR(1303,"Kullanıcı adı ya da şifre hatali",BAD_REQUEST),
 
+    TOKEN_ERROR(3001,"Token Oluşturma hatası",INTERNAL_SERVER_ERROR),
+
     INTERNAL_ERROR(3000,"Sunucuda beklenmeyen hata", INTERNAL_SERVER_ERROR),
 
     KULLANICI_BULUNAMADI(2301,"Aradığınız id'ye ait kullanıcı bulunamamıştır",INTERNAL_SERVER_ERROR);
