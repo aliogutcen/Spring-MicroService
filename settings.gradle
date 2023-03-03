@@ -3,4 +3,6 @@ include 'AuthMicroService'
 include 'ETicaretMicroService'
 include 'UrunMicroService'
 include 'UserMicroService'
+include 'ConfigServer'
+include 'GitConfigServer'
 

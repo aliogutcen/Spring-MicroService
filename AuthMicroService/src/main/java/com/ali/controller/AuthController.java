@@ -23,13 +23,11 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping(REGISTER)
-    public ResponseEntity<Boolean> register(@RequestBody @Valid RegisterRequestDto dto) {
-        if (dto.getPassword().equals(dto.getRepassword()))
+    public ResponseEntity<Boolean> register(@RequestBody @Valid RegisterRequestDto dto){
+        if(!dto.getPassword().equals(dto.getRepassword()))
             throw new AuthMicroServiceException(ErrorType.AUTH_PASSWORD_ERROR);
-        else {
-            authService.register(dto);
-            return ResponseEntity.ok(true);
-        }
+        authService.register(dto);
+        return ResponseEntity.ok(true);
     }
     @PostMapping(LOGIN)
     public ResponseEntity<String> doLogin(@RequestBody @Valid LoginRequestDto dto) {

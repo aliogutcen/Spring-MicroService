@@ -33,7 +33,7 @@ public class AuthService extends ServiceManager<Auth, Long> {
     }
 
 
-    public Boolean register(RegisterRequestDto dto) {
+    public boolean register(RegisterRequestDto dto) {
         if (authRepository.isUser(dto.getUsername()))
             throw new AuthMicroServiceException(ErrorType.AUTH_USERNAME_ERROR);
         Auth auth = save(IAuthMapper.INSTANCE.fromRegisterDto(dto));
@@ -51,7 +51,6 @@ public class AuthService extends ServiceManager<Auth, Long> {
             Optional<String> token = jwtTokenManager.createToken(authOptional.get().getId());
             if (token.isEmpty()) {
                 throw new AuthMicroServiceException(ErrorType.TOKEN_ERROR);
-
             }
             return token.get();
         } else throw new AuthMicroServiceException(ErrorType.AUTH_LOGIN_ERROR);

@@ -10,7 +10,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/AuthMicroService" />
+            <option value="$PROJECT_DIR$/ConfigServer" />
             <option value="$PROJECT_DIR$/ETicaretMicroService" />
+            <option value="$PROJECT_DIR$/GitConfigServer" />
             <option value="$PROJECT_DIR$/UrunMicroService" />
             <option value="$PROJECT_DIR$/UserMicroService" />
           </set>

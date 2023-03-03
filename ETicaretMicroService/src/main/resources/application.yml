@@ -1,2 +1,8 @@
-server:
-  port: 9091
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888/
+  config:
+    import: "configserver:"
+  application:
+    name: e-ticaret-micro-service

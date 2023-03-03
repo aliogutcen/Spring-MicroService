@@ -26,9 +26,6 @@ public class UserProfileController {
 
     @GetMapping(FINDALL)
     public ResponseEntity<List<UserProfile>> getAll(@Valid BaseRequestDto dto){
-
-
-
         return ResponseEntity.ok(userProfileService.findAll(dto.getToken()));
     }
 
